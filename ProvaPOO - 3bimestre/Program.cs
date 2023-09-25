@@ -15,7 +15,7 @@ class Program
 
             int escolha = Convert.ToInt32(Console.ReadLine());
 
-            if(escolha == 3)
+            if (escolha == 3)
             {
                 break;
             }
@@ -38,7 +38,7 @@ class Program
 
             decimal salario = Convert.ToDecimal(Console.ReadLine());
 
-            if(escolha == 1)
+            if (escolha == 1)
             {
                 Console.Write("CRM: ");
                 string crm = Console.ReadLine();
@@ -52,14 +52,16 @@ class Program
                 Medico medico = new Medico(nome, cpf, matricula, dataNascimento, sexo, salario, crm, ValorHoraExtra, especialidade);
                 funcionarios.Add(medico);
             }
-            else if(escolha == 2) 
+            else if (escolha == 2)
             {
                 Console.Write("Funcao: ");
                 string funcao = Console.ReadLine();
 
-                FuncionarioAdministrativo funcAdmin = new FuncionarioAdministrativo(nome, cpf, matricula,dataNascimento,sexo,salario, funcao);
+                FuncionarioAdministrativo funcAdmin = new FuncionarioAdministrativo(nome, cpf, matricula, dataNascimento, sexo, salario, funcao);
                 funcionarios.Add(funcAdmin);
             }
-        }
-    }
+            Console.WriteLine("\nLista de funcionario cadastrados: ");
+
+        }            
+    } 
 }
